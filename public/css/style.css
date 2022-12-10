@@ -1,0 +1,158 @@
+/* ___________IMPORTATION DE LA POLICE___________ */
+@font-face {
+  font-family: Poppins;
+  src: url(/Poppins-Regular.ttf);
+}
+
+/* ___________SAUVEGARDE DES COULEURS___________  */
+:root {
+  /* --title-color: ; */
+  --primary-color: #EB0600;
+  --secondary-color: #be9a23;
+  --light-color: #F1F0F1;
+  --dark-color: #414552;
+  --bg-color: #cbf3cc;
+}
+
+/* ___________STYILISATION DES TITRES___________  */
+h1, h2, h3 {
+  color: var(--dark-color);
+  text-transform: capitalize;
+  margin-left: 5%;
+}
+
+span {
+  color: var(--primary-color);
+  -webkit-text-stroke: medium;
+}
+
+/* ___________RESET DU BODY___________ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  color: var(--dark-color);
+  background-color: var(--bg-color);
+}
+
+/* ____________PARTIE ! BARRE DE NAVIGATION _________ */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  place-items: center;
+}
+
+/* Logo */
+#logo {
+  width: 100px;
+  background-color: var(--light-color);
+  border-radius: 35px;
+  padding: 5px 25px;
+  mix-blend-mode: lighten;
+}
+
+/* Menu NavBar*/
+nav ul {
+  display: flex;
+  margin-right: 5%;
+  list-style: none;
+}
+
+ul li a {
+  display: flex;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 5px 15px;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+ul li a:hover {
+  border: 1px solid var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  transition: 0.5s;
+  transform: rotate(7deg);
+}
+
+/* <!-- _________HAUT DE PAGE : FLOATAISON_________  --> */
+#top-page h1 {
+  text-align: center;
+}
+
+/* Boîte principal */
+#top-page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--light-color);
+  margin: auto;
+}
+
+#content-page {
+  flex-direction: column;
+  display: flex;
+  background-color: var(--secondary-color);
+}
+
+#article-content {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+/* Boîte de chaque article */
+.article-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 15px;
+  background-color: var(--light-color);
+}
+
+.article-box figure {
+  display: flex;
+  margin: auto;
+  margin-top: 15px;
+}
+
+figure img {
+  width: 100%;
+  background-color: red;
+}
+
+.text-box {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  margin: auto;
+  text-align: left;
+}
+
+.article-box h3 {
+  text-decoration: underline var(--dark-color);
+}
+
+.article-box p {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.article-box button {
+  width: 150px;
+  background-color: var(--secondary-color);
+  margin: 10px;
+  padding: 7px 15px;
+  border: none;
+  cursor: pointer;
+  color: var(--light-color);
+  place-self: end;
+  margin-right: 5%;
+}
+
+.article-box button:hover {
+  background-color: #be9a23!important;
+}
+

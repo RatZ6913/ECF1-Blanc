@@ -1,0 +1,135 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  width: 50px;
+  margin: 0;
+  font-size: 12px;
+}
+
+nav ul {
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+}
+
+nav input {
+  width: 25%;
+}
+
+.boxNameId {
+  display: flex;
+  width: 20%;
+  height: 10vh;
+  border: 3px solid var(--dark-color) !important;
+  border-radius: 15px;
+}
+
+.boxNameId span {
+  font-size: 12px;
+}
+
+.titleName {
+  position: relative;
+  background: var(--dark-color);
+  color: var(--light-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid var(--dark-color);
+  top: 50px;
+  font-size: 14px;
+}
+
+.pokeImage {
+  width: 65px;
+  margin: -35% auto 0px auto;
+}
+
+#content {
+  width: 100%;
+}
+
+/* Format responsive je cache les autres éléments  */
+.spanImg, .typeBox, .about, .description, .contentStats, .boxMainStats {
+  visibility: hidden;
+}
+
+/* PARTIE MODALE  */
+
+.modalBoxNameId {
+  margin-top: 10%;
+  width: 90%;
+  height: 70vh;
+  background-color: lightgray;
+}
+
+.modalTitleName h2 {
+  width: 50%;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.modalPokeImage {
+  width: 45%;
+  margin: 15px auto;
+  margin-bottom: -75px;
+  background-size: contain;
+}
+
+.modalSpanImg {
+  visibility: visible;
+}
+
+.modaltypeBox {
+  display: flex;
+  visibility: visible;
+  margin-top: 35px;
+}
+
+.modalAbout {
+  visibility: visible;
+  color: white;
+  background-color: var(--dark-color);
+}
+
+.modalDescription {
+  visibility: visible;
+  background-color: var(--dark-color);
+}
+
+.modalContentStats {
+  visibility: visible;
+}
+
+.modalBoxMainStats {
+  display: flex;
+  justify-content: center;
+  visibility: visible;
+  background-color: lightgray;
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width:450px) { 
+  .titleName {
+    font-size: 12px;
+  }
+
+  nav ul {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  nav li a {
+    margin: 2px;
+    width: 50px;
+  }
+}
+
+

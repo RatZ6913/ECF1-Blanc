@@ -1,0 +1,29 @@
+h3 {
+  font-size: 16px;
+}
+
+#article-content {
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+}
+
+.article-box {
+  place-self: center;
+  width: 95%;
+}
+
+@media screen and (max-width:514px) {
+  nav {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  nav ul a {
+    margin: 2px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
