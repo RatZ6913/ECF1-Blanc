@@ -1,3 +1,5 @@
+/* // ADAPTATION DES FORMATS PETITS ÉCRANS */
+/* BARRE DE NAVIGATION  */
 nav {
   display: flex;
   flex-direction: column;
@@ -23,6 +25,11 @@ nav input {
   width: 25%;
 }
 
+#content {
+  width: 100%;
+}
+
+/* CARTES POKÉMON */
 .boxNameId {
   display: flex;
   width: 20%;
@@ -52,11 +59,7 @@ nav input {
   margin: -35% auto 0px auto;
 }
 
-#content {
-  width: 100%;
-}
-
-/* Format responsive je cache les autres éléments  */
+/* FORMAT RESPONSIVE JE CACHE LES AUTRES NOEUDS  */
 .spanImg,
 .typeBox,
 .about,
@@ -67,7 +70,7 @@ nav input {
 }
 
 /* PARTIE MODALE  */
-
+/* POUR CHAQUE NOEUD J'AJOUTE UNE CLASSE VIA : SCRIPT.JS */
 .modalBoxNameId {
   margin-top: 10px;
   width: 85%;

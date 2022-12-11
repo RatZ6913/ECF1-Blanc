@@ -77,12 +77,17 @@ h1 {
   text-align: center;
 }
 
+#pokeball {
+  width: 70px;
+}
+
 #top-page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Bouton de Retour qui s'ajoutera avec le Script, après la recherche de Pokémon */
 .backList {
   display: block;
   margin: auto;
@@ -98,18 +103,8 @@ h1 {
   background-color: var(--light-color);
 }
 
-/* Stylisation pour Le script.js */
-.idSpan {
-  display: flex;
-  margin-right: 2%;
-  color: var(--dark-color);
-  justify-content: end;
-}
-
-#pokeball {
-  width: 50px;
-}
-
+/* STYLISATION DES NOEUDS CRÉES PAR LE SCRIPT.JS */
+/* BOÎTE QUI CONTIENDRA TOUT LE SCRIPT.JS  <SECTION> */
 #container {
   width: 80%;
   display: flex;
@@ -118,6 +113,7 @@ h1 {
   justify-content: center;
 }
 
+/* LA BOÎTE QUI CONTIENDRA TOUS LES INFOS DU POKÉMON (CARTE)  */
 .boxNameId {
   display: flex;
   flex-direction: column;
@@ -134,113 +130,15 @@ h1 {
   cursor: pointer;
 }
 
-/* Image Pokémon et Petit animation */
-.pokeImage {
-  width: 45%;
-  margin: 15px auto;
-  margin-bottom: -75px;
-  z-index: 1;
-  background-size: contain;
-  animation: firstEffect 2s infinite ease-in-out;
-}
-
-@keyframes firstEffect {
-  0% {
-    transform: translate(-0.5%);
-  }
-  25% {
-    transform: translate(0.5%);
-  }
-  50% {
-    transform: translate(-0.5%);
-  }
-  75% {
-    transform: translate(0.5%);
-  }
-  100% {
-    transform: translate(-0.5%);
-  }
-}
-
-.pokeImage:hover {
-  background-size: contain;
-  animation: secondEffect 2s infinite ease-in-out;
-}
-
-@keyframes secondEffect {
-  0% {
-    transform: scale(0.8);
-  }
-  25% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  75% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.8);
-  }
-}
-
-/* Boîte pour le type de Pokémon */
-.typeBox {
+/* L'ID DU POKÉMON */
+.idSpan {
   display: flex;
-  justify-content: center;
-  color: var(--light-color);
-  width: 50%;
-  margin: 60px auto -100px auto;
-  z-index: 1;
-  border-radius: 45px;
-  inline-size: auto;
+  margin-right: 2%;
+  color: var(--dark-color);
+  justify-content: end;
 }
 
-.type1 {
-  color: #ffffff;
-  border-radius: 25px;
-  padding: 0px 10px;
-  margin-right: 10px;
-}
-
-.type2 {
-  color: #ffffff;
-  background-color: var(--dark-color);
-  border-radius: 25px;
-  padding: 0px 10px;
-  margin-left: 10px;
-}
-
-.about {
-  background-color: var(--light-color);
-  border-radius: 50px 25px;
-  margin: 3px;
-  padding: 5px;
-  margin-top: 35px;
-  text-align: left;
-  min-height: 25vh;
-  font: -webkit-small-control;
-}
-
-.textAbout {
-  margin-top: 70px;
-  text-align: center;
-}
-
-.description {
-  display: contents;
-  color: var(--secondary-color);
-}
-
-/* Conteneur des Caractéristiques */
-.contentStats {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
-}
-
-/* Pokeball animation et position */
+/* IMAGE POKÉBALL AVEC ANIMATION */
 .spanImg {
   width: 100px;
   height: 100px;
@@ -274,7 +172,117 @@ h1 {
   }
 }
 
-/* // Stylisation de la boîte : BASE STATS */
+/* IMAGE DU POKÉMON IMPORTÉS AVEC ANIMATION*/
+.pokeImage {
+  width: 45%;
+  margin: 15px auto;
+  margin-bottom: -75px;
+  z-index: 1;
+  background-size: contain;
+  animation: firstEffect 2s infinite ease-in-out;
+}
+
+@keyframes firstEffect {
+  0% {
+    transform: translate(-0.5%);
+  }
+  25% {
+    transform: translate(0.5%);
+  }
+  50% {
+    transform: translate(-0.5%);
+  }
+  75% {
+    transform: translate(0.5%);
+  }
+  100% {
+    transform: translate(-0.5%);
+  }
+}
+
+  /* AUTRE ANIMATION DE L'IMAGE POKÉMON QUAND ON PASSE DESSUS */
+.pokeImage:hover {
+  background-size: contain;
+  animation: secondEffect 2s infinite ease-in-out;
+}
+
+@keyframes secondEffect {
+  0% {
+    transform: scale(0.8);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/* BOÎTE PRINCIPALE POUR LE TYPE DE POKÉMON */
+.typeBox {
+  display: flex;
+  justify-content: center;
+  color: var(--light-color);
+  width: 50%;
+  margin: 60px auto -100px auto;
+  z-index: 1;
+  border-radius: 45px;
+  inline-size: auto;
+}
+
+.type1 {
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 0px 10px;
+  margin-right: 10px;
+}
+
+.type2 {
+  color: #ffffff;
+  background-color: var(--dark-color);
+  border-radius: 25px;
+  padding: 0px 10px;
+  margin-left: 10px;
+}
+
+/* BOÎTE CONTENANT LES CARACTÉRISTIQUES DU POKÉMON */
+.about {
+  background-color: var(--light-color);
+  border-radius: 50px 25px;
+  margin: 3px;
+  padding: 5px;
+  margin-top: 35px;
+  text-align: left;
+  min-height: 25vh;
+  font: -webkit-small-control;
+}
+
+/* TITRE : ABOUT  */
+.textAbout {
+  margin-top: 70px;
+  text-align: center;
+}
+
+/* CONTENEUR DES CARACTÉRISTIQUES */
+.contentStats {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION DU POKÉMON  */
+.description {
+  display: contents;
+  color: var(--secondary-color);
+}
+
+/* BOÎTE PRINCIPALE DE LA PARTIE : BASE STATS */
 .boxMainStats {
   display: flex;
   justify-content: left;
