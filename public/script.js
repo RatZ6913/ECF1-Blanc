@@ -225,7 +225,6 @@ async function getFetch() {
       boxStatsBar.append(barStats);
     }
 
-
     // PARTIE : DU MODAL
     boxNameId.addEventListener('click', () => {
       modal.showModal();
@@ -263,11 +262,15 @@ async function getFetch() {
       modal.close();
     })
 
+    console.log(search);
+
     // Conteneur principale qui contiendra tous les noeuds du script
     container.append(boxNameId);
   }
 }
 
 getFetch();
+
+
 
 
