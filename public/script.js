@@ -7,6 +7,10 @@ let search = document.querySelector('#search');
 let searchValue = document.querySelector('#searchValue');
 let backList = document.createElement('button');
 backList.textContent = "Back to List";
+let warning = document.createElement('h2');
+warning.textContent = "Ce pokémon n'est pas disponible !";
+warning.classList.add('warning');
+
 
 async function getFetch() {
   for (let i = 1; i < 152; i++) {
@@ -275,12 +279,15 @@ async function getFetch() {
         topPage.after(backList);
       } else {
         boxNameId.style.display = "none";
+        warning.style.visibility = "visible";
+        topPage.after(warning);
       }
     })
 
     backList.addEventListener('click', () => {
       boxNameId.style.display = "block";
       backList.style.visibility = "hidden";
+      warning.style.visibility = "hidden";
     })
 
     // Conteneur principale qui contiendra tous les noeuds du script

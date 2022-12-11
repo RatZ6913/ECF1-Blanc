@@ -92,6 +92,7 @@ nav input {
   color: #ffffff;
   background-color: lightslategray;
   border: none;
+  top: 0;
 }
 
 .modalPokeImage {
@@ -160,7 +161,7 @@ nav input {
   }
 
   .boxNameId {
-    width: 35%;
+    width: 80%;
   }
 
   .pokeImage {
@@ -172,10 +173,10 @@ nav input {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
 
   .boxNameId {
-    width: 60%;
+    width: 80%;
   }
  }
 
