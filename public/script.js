@@ -3,6 +3,7 @@ let container = document.querySelector('#container');
 let modal = document.querySelector('#modal');
 let btnClose = document.createElement('button');
 btnClose.classList.add('btnClose');
+let search = document.querySelector('#search');
 
 async function getFetch() {
   for (let i = 1; i < 152; i++) {
@@ -19,12 +20,11 @@ async function getFetch() {
 
     //  Fenêtre  Modal : Click Event 
     boxNameId.addEventListener('click', () => {
-      modal.open.toggle;
       modal.showModal();
 
       modal.prepend(btnClose);
       modal.append(boxNameId);
-      
+
       boxNameId.classList.toggle('modalTitleName');
       image.classList.toggle('modalPokeImage');
       boxNameId.classList.toggle('modalBoxNameId');
@@ -248,6 +248,12 @@ async function getFetch() {
       boxStatsBar.append(barStats);
     }
 
+    // search.addEventListener('click', (e) => {
+
+    //   console.log(e.target);
+
+    // })
+
     // Conteneur principale qui contiendra tous les noeuds du script
     container.append(boxNameId);
   }
@@ -257,3 +263,4 @@ getFetch();
 
 
 
+// Charmander
