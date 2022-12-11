@@ -267,7 +267,7 @@ async function getFetch() {
     // BARRE DE RECHERCHE 
     searchValue.addEventListener('click', () => {
       let topPage = document.querySelector('#top-page');
-      if (search.value == titleName) {
+      if (search.value.toLowerCase() == titleName) {
         backList.classList.add('backList');
         backList.style.visibility = "visible";
         boxNameId.classList.add('searchCard');
