@@ -18,41 +18,6 @@ async function getFetch() {
     image.src = getData.sprites.front_default;
     textId = getData.id;
 
-    // // PARTIE : DU MODAL
-    // boxNameId.addEventListener('click', () => {
-    //   modal.showModal();
-    //   modal.prepend(btnClose);
-    //   modal.append(boxNameId);
-    //   modal.classList.toggle('modalTransform');
-
-    //   boxNameId.classList.toggle('modalTitleName');
-    //   image.classList.toggle('modalPokeImage');
-    //   boxNameId.classList.toggle('modalBoxNameId');
-    //   spanImg.classList.toggle('modalSpanImg');
-    //   typeBox.classList.toggle('modaltypeBox');
-    //   about.classList.toggle('modalAbout');
-    //   description.classList.toggle('modalDescription');
-    //   contentStats.classList.toggle('modalContentStats');
-    //   boxMainStats.classList.toggle('modalBoxMainStats');
-    // })
-
-    // // FERMETUR DU MODAL
-    // btnClose.addEventListener('click', (e) => {
-    //   boxNameId.classList.remove('modalTitleName');
-    //   image.classList.remove('modalPokeImage');
-    //   boxNameId.classList.remove('modalBoxNameId');
-    //   spanImg.classList.remove('modalSpanImg');
-    //   typeBox.classList.remove('modaltypeBox');
-    //   about.classList.remove('modalAbout');
-    //   description.classList.remove('modalDescription');
-    //   contentStats.classList.remove('modalContentStats');
-    //   boxMainStats.classList.remove('modalBoxMainStats');
-
-    //   modal.classList.remove('modalTransform');
-    //   container.append(boxNameId);
-    //   modal.close();
-    // })
-
     let spanImg = document.createElement('img');
     spanImg.classList.add('spanImg');
     spanImg.src = "./public/img/pokeball.svg";
@@ -260,13 +225,14 @@ async function getFetch() {
       boxStatsBar.append(barStats);
     }
 
-    
+
     // PARTIE : DU MODAL
     boxNameId.addEventListener('click', () => {
       modal.showModal();
       modal.prepend(btnClose);
       modal.append(boxNameId);
       modal.classList.toggle('modalTransform');
+      boxNameId.style.cursor = "auto";
 
       boxNameId.classList.toggle('modalTitleName');
       image.classList.toggle('modalPokeImage');
@@ -290,6 +256,7 @@ async function getFetch() {
       description.classList.remove('modalDescription');
       contentStats.classList.remove('modalContentStats');
       boxMainStats.classList.remove('modalBoxMainStats');
+      boxNameId.style.cursor = "pointer";
 
       modal.classList.remove('modalTransform');
       container.append(boxNameId);
