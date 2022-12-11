@@ -18,40 +18,40 @@ async function getFetch() {
     image.src = getData.sprites.front_default;
     textId = getData.id;
 
-    // PARTIE : DU MODAL
-    boxNameId.addEventListener('click', () => {
-      modal.showModal();
-      modal.prepend(btnClose);
-      modal.append(boxNameId);
-      modal.classList.toggle('modalTransform');
+    // // PARTIE : DU MODAL
+    // boxNameId.addEventListener('click', () => {
+    //   modal.showModal();
+    //   modal.prepend(btnClose);
+    //   modal.append(boxNameId);
+    //   modal.classList.toggle('modalTransform');
 
-      boxNameId.classList.toggle('modalTitleName');
-      image.classList.toggle('modalPokeImage');
-      boxNameId.classList.toggle('modalBoxNameId');
-      spanImg.classList.toggle('modalSpanImg');
-      typeBox.classList.toggle('modaltypeBox');
-      about.classList.toggle('modalAbout');
-      description.classList.toggle('modalDescription');
-      contentStats.classList.toggle('modalContentStats');
-      boxMainStats.classList.toggle('modalBoxMainStats');
-    })
+    //   boxNameId.classList.toggle('modalTitleName');
+    //   image.classList.toggle('modalPokeImage');
+    //   boxNameId.classList.toggle('modalBoxNameId');
+    //   spanImg.classList.toggle('modalSpanImg');
+    //   typeBox.classList.toggle('modaltypeBox');
+    //   about.classList.toggle('modalAbout');
+    //   description.classList.toggle('modalDescription');
+    //   contentStats.classList.toggle('modalContentStats');
+    //   boxMainStats.classList.toggle('modalBoxMainStats');
+    // })
 
-    // FERMETUR DU MODAL
-    btnClose.addEventListener('click', (e) => {
-      boxNameId.classList.remove('modalTitleName');
-      image.classList.remove('modalPokeImage');
-      boxNameId.classList.remove('modalBoxNameId');
-      spanImg.classList.remove('modalSpanImg');
-      typeBox.classList.remove('modaltypeBox');
-      about.classList.remove('modalAbout');
-      description.classList.remove('modalDescription');
-      contentStats.classList.remove('modalContentStats');
-      boxMainStats.classList.remove('modalBoxMainStats');
+    // // FERMETUR DU MODAL
+    // btnClose.addEventListener('click', (e) => {
+    //   boxNameId.classList.remove('modalTitleName');
+    //   image.classList.remove('modalPokeImage');
+    //   boxNameId.classList.remove('modalBoxNameId');
+    //   spanImg.classList.remove('modalSpanImg');
+    //   typeBox.classList.remove('modaltypeBox');
+    //   about.classList.remove('modalAbout');
+    //   description.classList.remove('modalDescription');
+    //   contentStats.classList.remove('modalContentStats');
+    //   boxMainStats.classList.remove('modalBoxMainStats');
 
-      modal.classList.remove('modalTransform');
-      container.append(boxNameId);
-      modal.close();
-    })
+    //   modal.classList.remove('modalTransform');
+    //   container.append(boxNameId);
+    //   modal.close();
+    // })
 
     let spanImg = document.createElement('img');
     spanImg.classList.add('spanImg');
@@ -100,7 +100,7 @@ async function getFetch() {
 
     // Couleurs en fonction du Type de pokémon
     // Le type prendra sa couleur si = True . Sinon prend sa couleur de base 
-    texType1 == "fire" ? type1.style.backgroundColor = "#f57d31" : null; 
+    texType1 == "fire" ? type1.style.backgroundColor = "#f57d31" : null;
     texType2 == "fire" ? type2.style.backgroundColor = "#f57d31" : null;
     texType1 == "grass" ? type1.style.backgroundColor = "#74cb48" : null;
     texType2 == "grass" ? type2.style.backgroundColor = "#74cb48" : null;
@@ -259,6 +259,42 @@ async function getFetch() {
       barStats.style.backgroundColor = barStatsColor[j];
       boxStatsBar.append(barStats);
     }
+
+    
+    // PARTIE : DU MODAL
+    boxNameId.addEventListener('click', () => {
+      modal.showModal();
+      modal.prepend(btnClose);
+      modal.append(boxNameId);
+      modal.classList.toggle('modalTransform');
+
+      boxNameId.classList.toggle('modalTitleName');
+      image.classList.toggle('modalPokeImage');
+      boxNameId.classList.toggle('modalBoxNameId');
+      spanImg.classList.toggle('modalSpanImg');
+      typeBox.classList.toggle('modaltypeBox');
+      about.classList.toggle('modalAbout');
+      description.classList.toggle('modalDescription');
+      contentStats.classList.toggle('modalContentStats');
+      boxMainStats.classList.toggle('modalBoxMainStats');
+    })
+
+    // FERMETUR DU MODAL
+    btnClose.addEventListener('click', (e) => {
+      boxNameId.classList.remove('modalTitleName');
+      image.classList.remove('modalPokeImage');
+      boxNameId.classList.remove('modalBoxNameId');
+      spanImg.classList.remove('modalSpanImg');
+      typeBox.classList.remove('modaltypeBox');
+      about.classList.remove('modalAbout');
+      description.classList.remove('modalDescription');
+      contentStats.classList.remove('modalContentStats');
+      boxMainStats.classList.remove('modalBoxMainStats');
+
+      modal.classList.remove('modalTransform');
+      container.append(boxNameId);
+      modal.close();
+    })
 
     // Conteneur principale qui contiendra tous les noeuds du script
     container.append(boxNameId);
