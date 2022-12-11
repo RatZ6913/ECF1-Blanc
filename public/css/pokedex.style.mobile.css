@@ -1,4 +1,9 @@
 /* // ADAPTATION DES FORMATS PETITS ÉCRANS */
+body {
+  padding: 0;
+  margin: 0;
+  padding-right: 0 !important;
+}
 /* BARRE DE NAVIGATION  */
 nav {
   display: flex;
@@ -32,8 +37,9 @@ nav input {
 /* CARTES POKÉMON */
 .boxNameId {
   display: flex;
-  width: 20%;
-  height: 10vh;
+  width: 25%;
+  height: 15vh;
+  min-height: 10vh;
   border: 3px solid var(--dark-color) !important;
   border-radius: 15px;
 }
@@ -49,14 +55,14 @@ nav input {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border: 1px solid var(--dark-color);
-  top: 50px;
+  top: 65%;
   font-size: 14px;
   font-variant: small-caps;
 }
 
 .pokeImage {
   width: 65px;
-  margin: -35% auto 0px auto;
+  margin: -25% auto 0px auto;
 }
 
 /* FORMAT RESPONSIVE JE CACHE LES AUTRES NOEUDS  */
@@ -73,7 +79,7 @@ nav input {
 /* POUR CHAQUE NOEUD J'AJOUTE UNE CLASSE VIA : SCRIPT.JS */
 .modalBoxNameId {
   margin-top: 10px;
-  width: 85%;
+  width: 70%;
   height: 70vh;
   background-color: #ffffff;
   border: 5px groove rgb(189, 144, 62) !important;
@@ -91,7 +97,7 @@ nav input {
 .modalPokeImage {
   width: 45%;
   margin: 15px auto;
-  margin-bottom: -55px;
+  margin-bottom: -45px;
   background-size: contain;
 }
 
@@ -130,12 +136,11 @@ nav input {
   border-radius: 15px;
 }
 
-@media screen and (max-width: 450px) {
-  .titleName {
-    font-size: 12px;
-  }
+@media screen and (max-width: 480px) {
 
   nav ul {
+    flex-direction: column;
+    align-content: center;
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
@@ -145,6 +150,32 @@ nav input {
     margin: 2px;
     width: 50px;
   }
+
+  nav input {
+    width: 80px;
+  }
+
+  .titleName {
+    font-size: 12px;
+  }
+
+  .boxNameId {
+    width: 35%;
+  }
+
+  .pokeImage {
+    animation: none;
+  }
+
+  .spanImg {
+    animation: none;
+  }
 }
 
+@media screen and (max-width: 480px) {
+
+  .boxNameId {
+    width: 60%;
+  }
+ }
 
