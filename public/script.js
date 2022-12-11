@@ -21,9 +21,9 @@ async function getFetch() {
     //  Fenêtre  Modal : Click Event 
     boxNameId.addEventListener('click', () => {
       modal.showModal();
-
       modal.prepend(btnClose);
       modal.append(boxNameId);
+      modal.classList.toggle('modalTransform');
 
       boxNameId.classList.toggle('modalTitleName');
       image.classList.toggle('modalPokeImage');
@@ -37,7 +37,10 @@ async function getFetch() {
     })
 
     // Fermeture du Modal 
-    btnClose.addEventListener('click', () => {
+    btnClose.addEventListener('click', (e) => {
+      modal.classList.remove('modalTransform');
+
+      container.append(boxNameId);
       modal.close();
     })
 
