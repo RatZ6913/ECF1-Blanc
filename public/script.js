@@ -5,6 +5,8 @@ let btnClose = document.createElement('button');
 btnClose.classList.add('btnClose');
 let search = document.querySelector('#search');
 let searchValue = document.querySelector('#searchValue');
+let backList = document.createElement('button');
+backList.textContent = "Back to List";
 
 async function getFetch() {
   for (let i = 1; i < 152; i++) {
@@ -264,15 +266,22 @@ async function getFetch() {
 
 
     searchValue.addEventListener('click', () => {
+      let topPage = document.querySelector('#top-page');
       if (search.value == titleName) {
+        backList.classList.add('backList');
+        backList.style.visibility = "visible";
         boxNameId.classList.add('searchCard');
         boxNameId.style.display = "flex";
-        
-      }else{
+        topPage.after(backList);
+      } else {
         boxNameId.style.display = "none";
       }
     })
 
+    backList.addEventListener('click', () => {
+      boxNameId.style.display = "block";
+      backList.style.visibility = "hidden";
+    })
 
     // Conteneur principale qui contiendra tous les noeuds du script
     container.append(boxNameId);
