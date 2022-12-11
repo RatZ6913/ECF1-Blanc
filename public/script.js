@@ -18,7 +18,7 @@ async function getFetch() {
     image.src = getData.sprites.front_default;
     textId = getData.id;
 
-    //  Fenêtre  Modal : Click Event 
+    // PARTIE : DU MODAL
     boxNameId.addEventListener('click', () => {
       modal.showModal();
       modal.prepend(btnClose);
@@ -36,10 +36,19 @@ async function getFetch() {
       boxMainStats.classList.toggle('modalBoxMainStats');
     })
 
-    // Fermeture du Modal 
+    // FERMETUR DU MODAL
     btnClose.addEventListener('click', (e) => {
-      modal.classList.remove('modalTransform');
+      boxNameId.classList.remove('modalTitleName');
+      image.classList.remove('modalPokeImage');
+      boxNameId.classList.remove('modalBoxNameId');
+      spanImg.classList.remove('modalSpanImg');
+      typeBox.classList.remove('modaltypeBox');
+      about.classList.remove('modalAbout');
+      description.classList.remove('modalDescription');
+      contentStats.classList.remove('modalContentStats');
+      boxMainStats.classList.remove('modalBoxMainStats');
 
+      modal.classList.remove('modalTransform');
       container.append(boxNameId);
       modal.close();
     })
@@ -89,9 +98,9 @@ async function getFetch() {
     type1.append(texType1);
     type2.append(texType2);
 
-    // Couleurs en fonction du Type de pokémon en ternaire (raccourcir les (If , Else if...)
+    // Couleurs en fonction du Type de pokémon
     // Le type prendra sa couleur si = True . Sinon prend sa couleur de base 
-    texType1 == "fire" ? type1.style.backgroundColor = "#f57d31" : null;
+    texType1 == "fire" ? type1.style.backgroundColor = "#f57d31" : null; 
     texType2 == "fire" ? type2.style.backgroundColor = "#f57d31" : null;
     texType1 == "grass" ? type1.style.backgroundColor = "#74cb48" : null;
     texType2 == "grass" ? type2.style.backgroundColor = "#74cb48" : null;
@@ -102,14 +111,14 @@ async function getFetch() {
     texType1 == "water" ? type1.style.backgroundColor = "#6493eb" : null;
     texType2 == "water" ? type2.style.backgroundColor = "#6493eb" : null;
     texType1 == "ice" ? type1.style.backgroundColor = "#9ad6df" : null;
-    texType2 == "ice" ? type2.style.backgroundColor = "#9ad6df" : null
-    texType1 == "psychic" ? type1.style.backgroundColor = "#fb5584" : null
-    texType2 == "psychic" ? type2.style.backgroundColor = "#fb5584" : null
-    texType1 == "steel" ? type1.style.backgroundColor = "#b7b9d0" : null
-    texType2 == "steel" ? type2.style.backgroundColor = "#b7b9d0" : null
-    texType1 == "ghost" ? type1.style.backgroundColor = "#70559b" : null
-    texType2 == "ghost" ? type2.style.backgroundColor = "#70559b" : null
-    texType1 == "rock" ? type1.style.backgroundColor = "#b69e31" : null
+    texType2 == "ice" ? type2.style.backgroundColor = "#9ad6df" : null;
+    texType1 == "psychic" ? type1.style.backgroundColor = "#fb5584" : null;
+    texType2 == "psychic" ? type2.style.backgroundColor = "#fb5584" : null;
+    texType1 == "steel" ? type1.style.backgroundColor = "#b7b9d0" : null;
+    texType2 == "steel" ? type2.style.backgroundColor = "#b7b9d0" : null;
+    texType1 == "ghost" ? type1.style.backgroundColor = "#70559b" : null;
+    texType2 == "ghost" ? type2.style.backgroundColor = "#70559b" : null;
+    texType1 == "rock" ? type1.style.backgroundColor = "#b69e31" : null;
     texType2 == "rock" ? type2.style.backgroundColor = "#b69e31" : null;
     texType1 == "poison" ? type1.style.backgroundColor = "#a43e9e" : null;
     texType2 == "poison" ? type2.style.backgroundColor = "#a43e9e" : null;
@@ -184,7 +193,7 @@ async function getFetch() {
     ability2.style.margin = "auto";
     abilityInfos.style.marginTop = "auto";
 
-    // Get : Url , des descriptions du pokémon
+    // Get : API , des descriptions du pokémon
     let typeData = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`);
     let getType = await typeData.json();
     let description = document.createElement('p');
@@ -251,12 +260,6 @@ async function getFetch() {
       boxStatsBar.append(barStats);
     }
 
-    // search.addEventListener('click', (e) => {
-
-    //   console.log(e.target);
-
-    // })
-
     // Conteneur principale qui contiendra tous les noeuds du script
     container.append(boxNameId);
   }
@@ -265,5 +268,3 @@ async function getFetch() {
 getFetch();
 
 
-
-// Charmander
