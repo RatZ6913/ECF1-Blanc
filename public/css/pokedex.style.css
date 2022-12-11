@@ -286,19 +286,17 @@ h1 {
 .barStats {
   height: 8px;
   border-radius: 25px;
-  /* width: calc(250px * 0.5) !important; */
 }
 
 /* *PARTIE MODAL  */
 /* Bouton fermeture Modal  */
 .btnClose {
-  /* display: flex; */
   width: 30px;
   height: 30px;
-  background: url(/public/img/close.png);
+  background-image: url(../img/close.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: var(--light-color);
+  background-color: #eb3e4e;
   border: none;
   border-radius: 50%;
 }
