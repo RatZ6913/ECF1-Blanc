@@ -7,7 +7,7 @@
 /* ___________SAUVEGARDE DES COULEURS___________  */
 :root {
   /* --title-color: ; */
-  --primary-color: #EB0600;
+  --primary-color: #eb0600;
   --secondary-color: #22485a;
   --light-color: #ffffff;
   --dark-color: #414552;
@@ -15,7 +15,9 @@
 }
 
 /* ___________STYILISATION DES TITRES___________  */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--dark-color);
   text-transform: capitalize;
   margin: 0;
@@ -153,23 +155,18 @@ h1 {
 @keyframes secondEffect {
   0% {
     transform: scale(0.8);
-    /* transform: translate(-5%); */
   }
   25% {
     transform: scale(1);
-    /* transform: translate(5%); */
   }
   50% {
     transform: scale(0.8);
-    /* transform: translate(-5%); */
   }
   75% {
     transform: scale(1);
-    /* transform: translate(5%); */
   }
   100% {
     transform: scale(0.8);
-    /* transform: translate(-5%); */
   }
 }
 
@@ -185,10 +182,10 @@ h1 {
   inline-size: auto;
 }
 
- .type1 {
+.type1 {
   color: #ffffff;
   border-radius: 25px;
-  padding:0px 10px;
+  padding: 0px 10px;
   margin-right: 10px;
 }
 
@@ -196,7 +193,7 @@ h1 {
   color: #ffffff;
   background-color: var(--dark-color);
   border-radius: 25px;
-  padding:0px 10px;
+  padding: 0px 10px;
   margin-left: 10px;
 }
 
@@ -350,8 +347,8 @@ h1 {
   animation: 0.5s ease-in-out modal;
 }
 
-@keyframes modal { 
-  from { 
+@keyframes modal {
+  from {
     transform: translate(0%, -55%);
   }
 }
@@ -366,20 +363,20 @@ h1 {
   display: block;
 }
 
-@media screen and (max-width:1400px) { 
+@media screen and (max-width: 1400px) {
   .boxNameId {
     width: 30%;
   }
-} 
+}
 
-@media screen and (max-width:1050px) { 
+@media screen and (max-width: 1050px) {
   .boxNameId {
     width: 35%;
   }
-} 
+}
 
-@media screen and (max-width:880px) { 
+@media screen and (max-width: 880px) {
   .boxNameId {
     width: 40%;
   }
-} 
+}

@@ -4,6 +4,7 @@ let modal = document.querySelector('#modal');
 let btnClose = document.createElement('button');
 btnClose.classList.add('btnClose');
 let search = document.querySelector('#search');
+let searchValue = document.querySelector('#searchValue');
 
 async function getFetch() {
   for (let i = 1; i < 152; i++) {
@@ -191,9 +192,7 @@ async function getFetch() {
 
     // Je crée un Tableau pour remplacer "getData.stats[j].stat.name"
     let arrName = ["Hp", "Atk", "Def", "Satk", "SDef", "Spd"];
-    let barStatsColor = ["#7DBC6F", "#BC806F", "#6F97BC", "#BCA36F", "#BBBC6F", "#6FBCAF"];
 
-    // Tableau de 0 à 6 pour éviter que le Code soit super long en appelant les différents valeurs
     for (let j = 0; j < 6; j++) {
       // Crée une Div à chaque itération qui sera un span
       let textName = document.createElement('span');
@@ -217,6 +216,7 @@ async function getFetch() {
       // Je mets toutes les span : textValue dans la 2ème <div> boxStatsValue
       boxStatsValue.append(textValue);
 
+      let barStatsColor = ["#7DBC6F", "#BC806F", "#6F97BC", "#BCA36F", "#BBBC6F", "#6FBCAF"];
       let barStats = document.createElement('span');
       barStats.classList.add('barStats');
       // Progression de la Barre 
@@ -262,7 +262,17 @@ async function getFetch() {
       modal.close();
     })
 
-    console.log(search);
+
+    searchValue.addEventListener('click', () => {
+      if (search.value == titleName) {
+        boxNameId.classList.add('searchCard');
+        boxNameId.style.display = "flex";
+        
+      }else{
+        boxNameId.style.display = "none";
+      }
+    })
+
 
     // Conteneur principale qui contiendra tous les noeuds du script
     container.append(boxNameId);
@@ -274,3 +284,4 @@ getFetch();
 
 
 
+// Abra
