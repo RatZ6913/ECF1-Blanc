@@ -13,6 +13,8 @@ nav a {
 }
 
 nav ul {
+  display: flex;
+  justify-content: space-around;
   margin: 0px 0px 10px 0px;
   padding: 0;
 }
@@ -30,7 +32,7 @@ nav input {
 }
 
 .boxNameId span {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .titleName {
@@ -42,6 +44,7 @@ nav input {
   border: 1px solid var(--dark-color);
   top: 50px;
   font-size: 14px;
+  font-variant: small-caps;
 }
 
 .pokeImage {
@@ -54,29 +57,38 @@ nav input {
 }
 
 /* Format responsive je cache les autres éléments  */
-.spanImg, .typeBox, .about, .description, .contentStats, .boxMainStats {
+.spanImg,
+.typeBox,
+.about,
+.description,
+.contentStats,
+.boxMainStats {
   visibility: hidden;
 }
 
 /* PARTIE MODALE  */
 
 .modalBoxNameId {
-  margin-top: 10%;
-  width: 90%;
+  margin-top: 10px;
+  width: 85%;
   height: 70vh;
-  background-color: lightgray;
+  background-color: #ffffff;
+  border: 5px groove rgb(189, 144, 62) !important;
 }
 
 .modalTitleName h2 {
-  width: 50%;
+  width: 45%;
   margin: auto;
   border-radius: 25px;
+  color: #ffffff;
+  background-color: lightslategray;
+  border: none;
 }
 
 .modalPokeImage {
   width: 45%;
   margin: 15px auto;
-  margin-bottom: -75px;
+  margin-bottom: -55px;
   background-size: contain;
 }
 
@@ -92,13 +104,13 @@ nav input {
 
 .modalAbout {
   visibility: visible;
-  color: white;
-  background-color: var(--dark-color);
+  color: #ffffff;
+  background-color: #e8babc;
 }
 
 .modalDescription {
   visibility: visible;
-  background-color: var(--dark-color);
+  color: rgb(80, 134, 141);
 }
 
 .modalContentStats {
@@ -109,13 +121,13 @@ nav input {
   display: flex;
   justify-content: center;
   visibility: visible;
-  background-color: lightgray;
+  background-color: #ffffff;
   width: 100%;
   padding-bottom: 10px;
   border-radius: 15px;
 }
 
-@media screen and (max-width:450px) { 
+@media screen and (max-width: 450px) {
   .titleName {
     font-size: 12px;
   }
@@ -131,5 +143,3 @@ nav input {
     width: 50px;
   }
 }
-
-
