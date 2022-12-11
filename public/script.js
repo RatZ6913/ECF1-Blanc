@@ -55,7 +55,7 @@ async function getFetch() {
 
     let spanImg = document.createElement('img');
     spanImg.classList.add('spanImg');
-    spanImg.src = "./public/img/pokeball.svg";
+    spanImg.src = "/public/img/pokeball.svg";
 
     if (textId <= 9) {
       textId = "00" + getData.id;
