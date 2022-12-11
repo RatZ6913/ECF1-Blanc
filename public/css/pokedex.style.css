@@ -295,7 +295,7 @@ h1 {
   /* display: flex; */
   width: 30px;
   height: 30px;
-  background-image: url(../img/close.png);
+  background: url(/public/img/close.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: var(--light-color);
