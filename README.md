@@ -12,4 +12,4 @@ Our referent trainer gave us an exercise to do. It is to know how to use the API
 
 Source API from : https://pokeapi.co 
 
-Web development instructor : @Aiola13
+Web development instructor : [@Aiola13](https://github.com/Aiola13)
