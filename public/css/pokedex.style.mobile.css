@@ -52,17 +52,15 @@ nav input {
   position: relative;
   background: var(--dark-color);
   color: var(--light-color);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   border: 1px solid var(--dark-color);
-  top: 65%;
   font-size: 14px;
   font-variant: small-caps;
 }
 
 .pokeImage {
   width: 65px;
-  margin: -25% auto 0px auto;
+  width: max-content;
+  margin: 0 auto;
 }
 
 /* FORMAT RESPONSIVE JE CACHE LES AUTRES NOEUDS  */
@@ -161,7 +159,7 @@ nav input {
   }
 
   .boxNameId {
-    width: 80%;
+    width: 30%;
   }
 
   .pokeImage {
@@ -172,11 +170,3 @@ nav input {
     animation: none;
   }
 }
-
-@media screen and (max-width: 400px) {
-
-  .boxNameId {
-    width: 80%;
-  }
- }
-
