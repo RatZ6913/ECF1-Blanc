@@ -138,7 +138,6 @@ nav input {
 }
 
 @media screen and (max-width: 480px) {
-
   nav ul {
     flex-direction: column;
     align-content: center;
@@ -161,16 +160,22 @@ nav input {
   }
 
   .boxNameId {
-    width: 90%;
+    width: 35%;
   }
 
   .pokeImage {
     -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
 
   .spanImg {
     -webkit-animation: none;
-            animation: none;
+    animation: none;
+  }
+
+  .modalBoxNameId {
+    margin-top: 10px;
+    width: 70%;
+    height: 70vh;
   }
 }
