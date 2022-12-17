@@ -59,6 +59,8 @@ nav input {
 
 .pokeImage {
   width: 65px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }
@@ -159,14 +161,16 @@ nav input {
   }
 
   .boxNameId {
-    width: 30%;
+    width: 90%;
   }
 
   .pokeImage {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   .spanImg {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 }
