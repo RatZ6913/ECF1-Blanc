@@ -1,6 +1,6 @@
 # ECF1-Blanc
 
-HTML & CSS & Javascript 
+HTML & CSS & Javascript (Responsiv)
 
 Subject of the Project : Pokedex
 
