@@ -232,11 +232,17 @@ h1 {
     transform: translate(-0.5%);
   }
   75% {
-    transform: translate(0.5%);
+    transform: translate(0.5%);\chat
   }
   100% {
     transform: translate(-0.5%);
   }
+}
+
+.imgPersos {
+  width: 32.5%;
+  max-width: 32.5%;
+  height: auto;
 }
 
   /* AUTRE ANIMATION DE L'IMAGE POKÉMON QUAND ON PASSE DESSUS */

@@ -7,10 +7,6 @@ let search = document.querySelector('#search');
 let searchValue = document.querySelector('#searchValue');
 let backList = document.createElement('button');
 backList.textContent = "Back to List";
-let warning = document.createElement('h2');
-warning.textContent = "Ce pokémon n'est pas disponible !";
-warning.classList.add('warning');
-
 
 async function getFetch() {
   for (let i = 1; i < 152; i++) {
@@ -22,7 +18,18 @@ async function getFetch() {
     boxNameId.classList.add('boxNameId');
     let image = document.createElement('img');
     image.classList.add('pokeImage');
-    image.src = getData.sprites.front_default;
+
+    if (getData.name == "magnemite") {
+      image.src = "./public/img/magneti.png";
+      image.classList.add('imgPersos');
+
+    } else if (getData.name == "tentacool") {
+      image.src = "./public/img/tentacool.png";
+      image.classList.add('imgPersos');
+    } else {
+      image.src = getData.sprites.front_default;
+    }
+
     textId = getData.id;
 
     let spanImg = document.createElement('img');
@@ -266,12 +273,12 @@ async function getFetch() {
       modal.classList.remove('modalTransform');
       container.append(boxNameId);
       modal.close();
-    })
+    });
 
     // BARRE DE RECHERCHE 
     searchValue.addEventListener('click', () => {
       let topPage = document.querySelector('#top-page');
-      if (search.value.toLowerCase() == titleName) {
+      if (search.value.toLowerCase() === titleName) {
         backList.classList.add('backList');
         backList.style.visibility = "visible";
         boxNameId.classList.add('searchCard');
@@ -279,16 +286,17 @@ async function getFetch() {
         topPage.after(backList);
       } else {
         boxNameId.style.display = "none";
-        warning.style.visibility = "visible";
-        topPage.after(warning);
+        backList.classList.add('backList');
+        backList.style.visibility = "visible";
+        topPage.after(backList);
       }
-    })
+    });
 
     backList.addEventListener('click', () => {
       boxNameId.style.display = "block";
       backList.style.visibility = "hidden";
       warning.style.visibility = "hidden";
-    })
+    });
 
     // Conteneur principale qui contiendra tous les noeuds du script
     container.append(boxNameId);
