@@ -19,4 +19,4 @@ Web development instructor : [@Aiola13](https://github.com/Aiola13)
 Source Models 3D : 
 - By : https://github.com/Farnights
     - Magnemite : Magneti02.fbx
-    - Tentacool : Tentacool .fbx
+    - Tentacool : Tentacool.fbx
